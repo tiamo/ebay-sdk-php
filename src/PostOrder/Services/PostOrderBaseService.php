@@ -75,7 +75,7 @@ class PostOrderBaseService extends \DTS\eBaySDK\Services\BaseRestService
         $headers = [];
 
         if ($this->getConfig('authorization')) {
-            $headers[self::HDR_AUTHORIZATION] = 'Bearer '.$this->getConfig('authorization');
+            $headers[self::HDR_AUTHORIZATION] = 'IAF '.$this->getConfig('authorization');
         } else {
             $headers[self::HDR_AUTH_TOKEN] = 'TOKEN '.$this->getConfig('authToken');
         }
